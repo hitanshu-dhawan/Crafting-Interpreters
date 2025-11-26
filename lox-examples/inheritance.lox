@@ -1,0 +1,30 @@
+class Doughnut {
+  cook() {
+    print "Fry until golden brown.";
+  }
+}
+
+class BostonCream < Doughnut {
+  cook() {
+    super.cook();
+    print "Pipe full of custard and coat with chocolate.";
+  }
+}
+
+BostonCream().cook();
+
+
+class Keyboard {
+  type() {
+    print "Keyboard noises";
+   }
+}
+
+class MechanicalKeyboard < Keyboard {
+  type() {
+    // super.type();
+    print "Loud mechanical keyboard noises :)";
+   }
+}
+
+MechanicalKeyboard().type();

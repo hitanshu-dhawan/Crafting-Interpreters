@@ -1,21 +1,25 @@
-// 1. Basic Classes and Instances
-print "--- Basic Classes ---";
 class DevonshireCream {
-  serve() {
+  serveOn() {
     return "Scones";
   }
 }
-print DevonshireCream; // Expect: <class DevonshireCream>
-var cream = DevonshireCream();
-print cream; // Expect: <instance of DevonshireCream>
-print cream.serve(); // Expect: Scones
 
-// Property assignment
-cream.flavor = "Sweet";
-print cream.flavor;
+// print DevonshireCream;
 
-// 2. Methods and 'this'
-print "--- Methods and 'this' ---";
+class Bacon {
+  eat() {
+    print "Crunch crunch crunch!";
+  }
+}
+
+var bacon = Bacon();
+bacon.eat();
+
+bacon.isCrunchy = false;
+
+print "Bacon crunchy: "  + bacon.isCrunchy;
+
+
 class Cake {
   taste() {
     var adjective = "delicious";
@@ -25,39 +29,25 @@ class Cake {
 
 var cake = Cake();
 cake.flavor = "German chocolate";
-cake.taste(); // Expect: The German chocolate cake is delicious!
+cake.taste();
 
-// 3. Initializers
-print "--- Initializers ---";
+
 class Person {
+  
   init(name) {
     this.name = name;
   }
-
-  sayName() {
-    print "My name is " + this.name;
+  
+  greet() {
+    print "My name is " + this.name + " " + this.nameSuffix;
   }
+  
 }
 
-var jane = Person("Jane");
-jane.sayName(); // Expect: My name is Jane
+var britannio = Person("Britannio");
+britannio.nameSuffix = ":)"
+britannio.greet();
+// Class instances can be reinitialised.
+britannio.init("Brit");
 
-// 4. Inheritance
-print "--- Inheritance ---";
-class Doughnut {
-  cook() {
-    print "Fry until golden brown.";
-  }
-}
 
-class BostonCream < Doughnut {
-  cook() {
-    super.cook();
-    print "Pipe full of custard and coat with chocolate.";
-  }
-}
-
-BostonCream().cook();
-// Expect:
-// Fry until golden brown.
-// Pipe full of custard and coat with chocolate.
