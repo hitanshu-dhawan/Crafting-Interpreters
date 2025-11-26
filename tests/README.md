@@ -56,40 +56,71 @@ Tests the evaluation phase, verifying that expressions are correctly interpreted
 - ✅ **YU6**: Runtime errors for binary operators (arithmetic)
 - ✅ **CQ1**: Runtime errors for binary operators (addition)
 - ✅ **IB5**: Runtime errors for relational operators
+- ✅ **XY1**: Print statements
+- ✅ **OE4**: Multiple statements
+- ✅ **FI3**: Expression statements
+- ✅ **YG2**: Variable declarations
+- ✅ **SV7**: Variable runtime errors
+- ✅ **BC1**: Variable initialization
+- ✅ **DW9**: Variable redeclaration
+- ✅ **PL3**: Assignment operations
+- ✅ **VR5**: Block syntax
+- ✅ **FB4**: Scoping
+- ✅ **NE3**: If statements
+- ✅ **ST5**: Else statements
+- ✅ **FH8**: Else-if statements
+- ✅ **XJ4**: Nested if statements
+- ✅ **WK8**: Logical OR operator
+- ✅ **JX4**: Logical AND operator
+- ✅ **QY3**: While loops
+- ✅ **BW6**: For loops
+- ✅ **VT1**: Loop syntax errors
+- ✅ **AV4**: Native functions
+- ✅ **PG8**: Function declarations & calls
+- ✅ **LB6**: Function arguments
+- ✅ **PX4**: Function syntax errors
+- ✅ **RD2**: Return statements
+- ✅ **EY3**: Higher-order functions
+- ✅ **FJ7**: Function runtime errors
+- ✅ **BZ4**: Function scope
+- ✅ **GG6**: Closures
+- ✅ **VF4**: Class declarations
+- ✅ **YK8**: Class instantiation
+- ✅ **YF3**: Getters & setters
+- ✅ **QR2**: Instance methods
+- ✅ **YD7**: `this` keyword
+- ✅ **DG2**: Invalid `this` usage
+- ✅ **OU5**: Constructors
+- ✅ **EB9**: Return from init
+- ✅ **MF6**: Class inheritance
+- ✅ **KY1**: Method inheritance
+- ✅ **KA5**: Method overriding
+- ✅ **AB0**: Inheritance errors
+- ✅ **QI0**: `super` keyword
+- ✅ **IB9**: Invalid `super` usage
+- ✅ **DE8**: Identifier resolution
+- ✅ **PT7**: Self-initialization errors
+- ✅ **PZ7**: Variable redeclaration errors
+- ✅ **EH3**: Top-level return errors
 
 ## Running Tests
 
 ### Run All Tests
 ```bash
-# Using npm/bun scripts
-bun test
-
-# Or directly
-bun run tests/run-tests.ts
+# Using npm scripts
+npm test
 ```
 
 ### Run Individual Test Suites
 ```bash
 # Scanner tests only
-bun test:scanner
+npm run test:scanner
 
 # Parser tests only  
-bun test:parser
+npm run test:parser
 
 # Interpreter tests only
-bun test:interpreter
-```
-
-### Run Individual Files
-```bash
-# Scanner tests
-bun run tests/scanner.test.ts
-
-# Parser tests
-bun run tests/parser.test.ts
-
-# Interpreter tests
-bun run tests/interpreter.test.ts
+npm run test:interpreter
 ```
 
 ## Test Structure
@@ -115,35 +146,3 @@ The tests use a custom lightweight testing framework (`TestRunner`) that:
 - ✅ Provides detailed failure reporting
 - ✅ Handles both success and error cases
 - ✅ Supports parallel test execution
-
-## Expected Output Format
-
-The tests verify exact output matching for:
-
-### Tokenize Command
-```
-TOKEN_TYPE lexeme literal
-EOF  null
-```
-
-### Parse Command
-```
-(operator operand1 operand2)
-```
-
-### Evaluate Command
-```
-result_value
-```
-
-## Error Handling
-
-Tests also verify proper error handling:
-- **Exit Code 65**: Syntax/lexical errors
-- **Exit Code 70**: Runtime errors  
-- **Exit Code 0**: Successful execution
-
-Error messages should follow the format:
-```
-[line X] Error: Description
-```
