@@ -60,7 +60,7 @@ class Resolver implements Expr.Visitor<void>, Stmt.Visitor<void> {
         if (this.currentClass === ClassType.NONE) {
             Lox.error(expr.keyword, "Can't use 'super' outside of a class.");
         } else if (this.currentClass !== ClassType.SUBCLASS) {
-            // Lox.error(expr.keyword, "Can't use 'super' in a class with no superclass.");
+            Lox.error(expr.keyword, "Can't use 'super' in a class with no superclass.");
         }
 
         this.resolveLocal(expr, expr.keyword);
