@@ -1,8 +1,5 @@
 import { TestRunner } from './test-runner.js';
 
-/**
- * Interpreter tests based on the CodeCrafters test cases
- */
 const interpreterTests = [
     // Stage #IZ6: Evaluating Expressions - Literals: Booleans & Nil
     {
@@ -2744,7 +2741,7 @@ outer();`,
 ];
 
 /**
- * Run all interpreter tests
+ * Run interpreter tests
  */
 async function runInterpreterTests(): Promise<void> {
     console.log("🔍 Running Interpreter Tests...\n");

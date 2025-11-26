@@ -1,8 +1,5 @@
 import { TestRunner } from './test-runner.js';
 
-/**
- * Parser tests based on the CodeCrafters test cases
- */
 const parserTests = [
     // Stage #SC2: Parsing Expressions - Booleans & Nil
     {

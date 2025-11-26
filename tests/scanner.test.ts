@@ -1,13 +1,10 @@
 import { TestRunner } from './test-runner.js';
 
-/**
- * Scanner tests based on the CodeCrafters test cases
- */
 const scannerTests = [
     // Stage #RY8: Scanning - Empty file
     {
         name: "[tester::#RY8] [test-1] Scanning: Empty file",
-        input: ``, // Corrected from ""
+        input: ``,
         command: "./your_program.sh tokenize test.lox",
         expectedOutput: "EOF  null",
         expectedExitCode: 0,
@@ -16,7 +13,7 @@ const scannerTests = [
     // Stage #OL4: Scanning - Parentheses
     {
         name: "[tester::#OL4] [test-1] Scanning: Parentheses",
-        input: `(`, // Corrected from \"(\"
+        input: `(`,
         command: "./your_program.sh tokenize test.lox",
         expectedOutput: "LEFT_PAREN ( null\nEOF  null",
         expectedExitCode: 0,
@@ -24,7 +21,7 @@ const scannerTests = [
     },
     {
         name: "[tester::#OL4] [test-2] Scanning: Parentheses",
-        input: `))`, // Corrected from \"))\"
+        input: `))`,
         command: "./your_program.sh tokenize test.lox",
         expectedOutput: "RIGHT_PAREN ) null\nRIGHT_PAREN ) null\nEOF  null",
         expectedExitCode: 0,
@@ -40,7 +37,7 @@ const scannerTests = [
     },
     {
         name: "[tester::#OL4] [test-4] Scanning: Parentheses",
-        input: `)()((()`, // Corrected from \"()()((()\"
+        input: `)()((()`,
         command: "./your_program.sh tokenize test.lox",
         expectedOutput: "RIGHT_PAREN ) null\nLEFT_PAREN ( null\nRIGHT_PAREN ) null\nLEFT_PAREN ( null\nLEFT_PAREN ( null\nLEFT_PAREN ( null\nRIGHT_PAREN ) null\nEOF  null",
         expectedExitCode: 0,
@@ -49,7 +46,7 @@ const scannerTests = [
     // Stage #OE8: Scanning - Braces
     {
         name: "[tester::#OE8] [test-1] Scanning: Braces",
-        input: `}`, // Corrected from \"}\"
+        input: `}`,
         command: "./your_program.sh tokenize test.lox",
         expectedOutput: "RIGHT_BRACE } null\nEOF  null",
         expectedExitCode: 0,
