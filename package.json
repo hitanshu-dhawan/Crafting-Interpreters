@@ -1,6 +1,6 @@
 {
-  "name": "@codecrafters/interpreter",
-  "description": "Build your own Interpreter challenge, from CodeCrafters",
+  "name": "Crafting-Interpreters",
+  "description": "A TypeScript implementation of the Lox tree-walk interpreter, faithfully adapted from Crafting Interpreters.",
   "type": "module",
   "scripts": {
     "dev": "bun run app/main.ts",
